@@ -1,0 +1,53 @@
+
+Создать внешний репозиторий в веб-браузере, клонировать на устройство
+git clone 'URL'
+git branch - проверить наличие веток
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bug Reports
+- SQL
+- Charles
+- Mobile testing
+git branch Postman
+git branch Jmeter
+git branch CheckLists
+git branch Bug Reports
+git branch SQL
+git branch Charles
+git branch Mobile testing
+
+2. Запушить все ветки на внешний репозиторий
+   git push -u --all
+3. В ветке Bug Reports сделать текстовый документ со структурой баг репорта
+   git checkout Bug_Reports
+   cat > new_issue.txt
+   описала структуру
+   ctrl+c
+4. Запушить структуру багрепорта на внешний репозиторий
+   git add *
+   git commit -m 'Added new issue'
+   git push
+5. Вмержить ветку Bug Reports в Main
+   git checkout main
+   git merge Bag_Reports -m 'merge new issue'
+6. Запушить main на внешний репозиторий.
+   git push
+7. В ветке CheckLists набросать структуру чек листа.
+   git checkout CheckLists
+   cat > new_checklist.txt
+   описала структуру
+   ctrl+c
+8. Запушить структуру на внешний репозиторий
+   git add new_checklist.txt; git commit -m 'Added new checklist'
+   git push
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+   В браузере нажимаем следующее
+   compare & pull request
+   create pull request
+   merge pull request
+   confirm merge
+10. Синхронизировать Внешнюю и Локальную ветки Main
+   git fetch
+   git pull
